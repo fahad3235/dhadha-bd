@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dhadha BD - Bangla Riddle Game</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <h1 id="title">Dhadha BD</h1>
+    <p id="tagline">Classic Bangla riddles - guess the answer, beat your streak.</p>
+  </div>
+  <button id="langBtn" type="button">Bangla</button>
+</header>
+
+<main class="wrap">
+  <section class="controls" aria-label="Game settings">
+    <label><span id="lblCategory">Category</span>
+      <select id="category"></select>
+    </label>
+    <label><span id="lblDifficulty">Difficulty</span>
+      <select id="difficulty"></select>
+    </label>
+    <button id="newBtn" type="button">New riddle</button>
+  </section>
+
+  <section class="stats" aria-label="Statistics">
+    <div><span id="statScoreLabel">Score</span>: <strong id="statScore">0</strong></div>
+    <div><span id="statStreakLabel">Streak</span>: <strong id="statStreak">0</strong></div>
+    <div><span id="statBestLabel">Best streak</span>: <strong id="statBest">0</strong></div>
+    <div><span id="statPlayedLabel">Played</span>: <strong id="statPlayed">0</strong></div>
+    <div><span id="statCorrectLabel">Correct</span>: <strong id="statCorrect">0</strong></div>
+    <button id="resetStatsBtn" type="button">Reset stats</button>
+  </section>
+
+  <section id="riddleCard" class="card" aria-live="polite">
+    <div class="badges">
+      <span id="catBadge" class="badge"></span>
+      <span id="diffBadge" class="badge badge-alt"></span>
+      <span class="tries"><span id="attemptsLabel">Tries</span>: <strong id="attempts">0</strong></span>
+    </div>
+    <p id="question" class="question"></p>
+    <div class="answer-row">
+      <input id="answerInput" type="text" autocomplete="off" placeholder="Type your answer...">
+      <button id="submitBtn" type="button">Check answer</button>
+    </div>
+    <div class="actions">
+      <button id="hintBtn" type="button">Show hint</button>
+      <button id="revealBtn" type="button">Reveal answer</button>
+      <button id="skipBtn" type="button">Skip</button>
+    </div>
+    <p id="hintText" class="hint"></p>
+    <p id="answerText" class="answer"></p>
+    <p id="message" class="message" aria-live="polite"></p>
+    <p id="hintNote" class="note"></p>
+  </section>
+
+  <p id="emptyState" class="empty" hidden></p>
+
+  <section class="howto">
+    <h2 id="howTitle">How to play</h2>
+    <ul id="howList"></ul>
+  </section>
+</main>
+
+<footer class="footer">
+  <p id="footerText">Dhadha BD is a free offline riddle game.</p>
+</footer>
+
+<script src="js/logic.js"></script>
+<script src="js/data.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

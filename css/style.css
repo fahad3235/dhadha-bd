@@ -1,0 +1,77 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; overflow-x: hidden; }
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: #fdf6ec;
+  color: #2b2118;
+  line-height: 1.55;
+}
+.topbar {
+  display: flex; justify-content: space-between; align-items: flex-start; gap: 12px;
+  background: #7a2e1d; color: #fff; padding: 16px 20px;
+}
+.topbar h1 { margin: 0; font-size: 1.7rem; }
+.topbar p { margin: 4px 0 0; opacity: 0.9; font-size: 0.95rem; }
+button {
+  cursor: pointer; border: 0; border-radius: 10px;
+  background: #7a2e1d; color: #fff; font-size: 1rem; padding: 10px 16px;
+}
+button:disabled { opacity: 0.45; cursor: default; }
+.topbar button { background: #fff; color: #7a2e1d; font-weight: 700; white-space: nowrap; }
+.wrap { max-width: 720px; margin: 0 auto; padding: 16px; width: 100%; }
+.controls, .stats {
+  display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center;
+  background: #fff; border: 1px solid #e8dcc8; border-radius: 14px; padding: 14px 16px; margin-bottom: 14px;
+}
+.controls label { display: flex; flex-direction: column; gap: 4px; font-weight: 600; font-size: 0.9rem; }
+select {
+  font-size: 1rem; padding: 9px 10px; border-radius: 10px;
+  border: 1px solid #d8c9ae; background: #fff; color: inherit; max-width: 100%;
+}
+.stats div { font-size: 0.95rem; }
+.stats button { margin-left: auto; background: #fff; color: #7a2e1d; border: 1px solid #7a2e1d; }
+.card {
+  background: #fff; border: 1px solid #e8dcc8; border-radius: 16px; padding: 20px; margin-bottom: 14px;
+}
+.badges { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 12px; }
+.badge {
+  background: #fbe9d0; color: #7a2e1d; font-weight: 700; font-size: 0.85rem;
+  padding: 4px 12px; border-radius: 999px;
+}
+.badge-alt { background: #e7efe6; color: #2f5d33; }
+.tries { margin-left: auto; font-size: 0.9rem; }
+.question { font-size: 1.35rem; font-weight: 700; margin: 0 0 16px; }
+.answer-row { display: flex; gap: 10px; }
+.answer-row input {
+  flex: 1 1 auto; min-width: 0; font-size: 1.05rem; padding: 11px 12px;
+  border: 1.5px solid #d8c9ae; border-radius: 10px; color: inherit;
+}
+.answer-row button { flex: 0 0 auto; }
+.actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+.actions button { background: #fff; color: #7a2e1d; border: 1px solid #7a2e1d; }
+.hint { color: #5a4632; font-style: italic; min-height: 1.2em; }
+.answer { font-size: 1.25rem; font-weight: 800; color: #2f5d33; min-height: 1.2em; }
+.message { font-weight: 700; min-height: 1.2em; }
+.note { font-size: 0.85rem; color: #7a6a55; }
+.empty {
+  background: #fff; border: 1px dashed #c9a27a;
+  border-radius: 14px; padding: 20px; text-align: center; font-weight: 600;
+}
+.howto {
+  background: #fff; border: 1px solid #e8dcc8; border-radius: 14px; padding: 16px 20px;
+}
+.howto h2 { margin: 0 0 8px; font-size: 1.15rem; }
+.howto li { margin-bottom: 6px; }
+.footer { text-align: center; color: #7a6a55; font-size: 0.85rem; padding: 8px 16px 24px; }
+
+@media (max-width: 480px) {
+  .topbar { padding: 12px 14px; }
+  .topbar h1 { font-size: 1.4rem; }
+  .wrap { padding: 12px; }
+  .question { font-size: 1.2rem; }
+  .answer-row { flex-direction: column; }
+  .answer-row button { width: 100%; }
+  .controls label { flex: 1 1 45%; }
+  .controls label select { width: 100%; }
+  .stats button { margin-left: 0; }
+}
